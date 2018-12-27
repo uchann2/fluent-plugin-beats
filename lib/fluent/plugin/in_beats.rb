@@ -126,11 +126,9 @@ module Fluent::Plugin
               router.emit(tag, @time_parser.parse(map['@timestamp']), map)
               
             }
-            conn.close
           rescue => e
             log.error "unexpected error", :error => e.to_s
             log.error_backtrace
-            conn.close
           end
         }
       end
