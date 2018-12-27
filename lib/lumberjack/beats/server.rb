@@ -328,6 +328,7 @@ module Lumberjack module Beats
       Errno::EBADF,
       Errno::EACCES,
       IO::EAGAINWaitReadable
+      Exception => error
       # EOF or other read errors, only action is to shutdown which we'll do in
       # 'ensure'
     rescue
